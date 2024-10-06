@@ -33,24 +33,20 @@ describe('Latvian personal code check', () => {
   })
 
   test('should match the pattern LVA-XXXX where XXXX is a four-digit number', () => {
-    const code = generateLatvianCode()
-    expect(/LVA-\d{4}/.test(code)).toBe(true)
+    expect(/LVA-\d{4}/.test(generateLatvianCode())).toBe(true)
   })
 })
 
 describe('Lithuanian personal code check', () => {
   test('should start with "LTU-"', () => {
-    const code = generateLithuanianCode()
-    expect(code.startsWith('LTU-')).toBe(true)
+    expect(generateLithuanianCode().startsWith('LTU-')).toBe(true)
   })
 
   test('should be 8 characters long', () => {
-    const code = generateLithuanianCode()
-    expect(code.length).toBe(8)
+    expect(generateLithuanianCode().length).toBe(8)
   })
 
   test('should match the pattern LTU-XXXX where XXXX is a four-digit number', () => {
-    const code = generateLithuanianCode()
-    expect(/LTU-\d{4}/.test(code)).toBe(true)
+    expect(/LTU-\d{4}/.test(generateLithuanianCode())).toBe(true)
   })
 })
